@@ -1,0 +1,28 @@
+version: '3'
+services:
+  spring_boot_com_mysql:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: spring_boot_com_mysql/api
+    ports:
+      - '8080:8080'
+    networks:
+      - production-network
+    links:
+      - db
+  db:
+    image: mysql:5.6
+    ports:
+      - '3306:3306'
+    networks:
+      - production-network
+    environment:
+      - MYSQL_DATABASE=aulajpa
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - ./docker/volume_mysql:/var/lib/mysql
+
+networks:
+  production-network:
+    driver: bridge
