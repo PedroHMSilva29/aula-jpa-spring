@@ -1,8 +1,10 @@
 FROM openjdk:14
 
-ADD /target/aula-jpa-spring-0.0.1-SNAPSHOT.jar aula-jpa-spring-0.0.1-SNAPSHOT.jar
+WORKDIR /app
+
+ADD /target/aula-jpa-spring*.jar aula-jpa.jar
 
 EXPOSE 8080
 EXPOSE 5005
 
-ENTRYPOINT ["java", "-jar", "aula-jpa-spring-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "aula-jpa.jar"]

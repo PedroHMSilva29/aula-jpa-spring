@@ -9,6 +9,9 @@ services:
       - '8080:8080'
     networks:
       - production-network
+    environment:
+      - MYSQL_HOST_DB=db
+      - HIBERNATE_DDL=update
     links:
       - db
   db:
