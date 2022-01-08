@@ -11,7 +11,7 @@ services:
       - production-network
     environment:
       - MYSQL_HOST_DB=db
-      - HIBERNATE_DDL=update
+      - HIBERNATE_DDL=create
     links:
       - db
   db:

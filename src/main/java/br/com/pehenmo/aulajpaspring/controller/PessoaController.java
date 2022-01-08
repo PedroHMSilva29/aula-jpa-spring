@@ -3,6 +3,8 @@ package br.com.pehenmo.aulajpaspring.controller;
 import br.com.pehenmo.aulajpaspring.model.Pessoa;
 import br.com.pehenmo.aulajpaspring.repository.PessoaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -49,5 +51,22 @@ public class PessoaController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @GetMapping(value = "/page")
+    public ResponseEntity<Page<Pessoa>> findAll(Pageable pageable) {
+        Page<Pessoa> result = dao.findAll(pageable);
+        return ResponseEntity.ok(result);
+    }
+
+    @GetMapping(value = "/search-nome")
+    public ResponseEntity<Page<Pessoa>> searchByName(@RequestParam(defaultValue = "") String nome, Pageable pageable) {
+        Page<Pessoa> result = dao.findByNome(nome, pageable);
+        return ResponseEntity.ok(result);
+    }
+
+    @GetMapping(value = "/search-email")
+    public ResponseEntity<Pessoa> searchByEmail(@RequestParam(defaultValue = "") String email) {
+        Pessoa result = dao.findByEmailIgnoreCase(email);
+        return ResponseEntity.ok(result);
+    }
 
 }
