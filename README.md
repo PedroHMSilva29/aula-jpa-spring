@@ -18,7 +18,7 @@
 
 ## Code Snippets
 
-#####application.properties
+##### application.properties
 ```
 spring.datasource.url=jdbc:mysql://${MYSQL_HOST_DB:localhost}:3306/aulajpa
 spring.datasource.username=root
@@ -31,7 +31,8 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
 
 ```
 
-#####import.sql
+##### import.sql
+
 ```sql
 INSERT INTO pessoa(nome,email) VALUES ('Maria','maria@gmail.com');
 INSERT INTO pessoa(nome,email) VALUES ('Joao Silva','joao@gmail.com');
@@ -60,7 +61,7 @@ INSERT INTO pessoa(nome,email) VALUES ('Ana Carolina','ana@gmail.com');
 INSERT INTO pessoa(nome,email) VALUES ('Filipe','filipe@gmail.com');
 ```
 
-##References
+## References
 
  &nbsp; https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference <br />
  &nbsp; https://github.com/devsuperior/aula-jparepository <br />
