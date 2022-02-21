@@ -57,8 +57,6 @@ INSERT INTO pessoa(nome,email) VALUES ('Gisele','gisele@gmail.com');
 INSERT INTO pessoa(nome,email) VALUES ('Larissa','larissa@gmail.com');
 INSERT INTO pessoa(nome,email) VALUES ('Natanael','natanael@gmail.com');
 INSERT INTO pessoa(nome,email) VALUES ('Meire','meire@gmail.com');
-INSERT INTO pessoa(nome,email) VALUES ('Ana Carolina','ana@gmail.com');
-INSERT INTO pessoa(nome,email) VALUES ('Filipe','filipe@gmail.com');
 ```
 
 ## References
