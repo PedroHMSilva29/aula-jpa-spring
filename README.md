@@ -5,10 +5,10 @@
 
 ## Requisits
 
- &nbsp;<b>Spring Boot w/ Spring JPA, Spring Web and Mysql Connector</b>: 2.2.4.RELEASE <br />
- &nbsp;<b>JDK</b>: 11 <br />
- &nbsp;<b>Maven</b>: 3.6.3 <br />
- &nbsp;<b>Docker Desktop</b>: 20.10.8 <br />
+ &nbsp;<b>Spring Boot w/ Spring JPA, Spring Web and Mysql Connector</b>: 2.2.4.RELEASE<br />
+ &nbsp;<b>JDK</b>: 11 or latest <br />
+ &nbsp;<b>Maven</b>: 3.6.3 or latest <br />
+ &nbsp;<b>Docker Desktop</b>: 20.10.8 or latest <br />
 
 ## Commands
 
